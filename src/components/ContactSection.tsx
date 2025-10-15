@@ -87,15 +87,15 @@ const ContactSection = () => {
       <AuroraBackground className="min-h-screen py-20 px-4 flex items-center" showRadialGradient={true}>
         <div className="max-w-4xl mx-auto w-full relative z-10">
           <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient-gold">
+            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient-gold drop-shadow-lg">
               O Grand Finale
             </h2>
-            <p className="text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto font-medium drop-shadow-md">
               Vamos criar juntos uma experiência mágica e inesquecível
             </p>
           </div>
 
-          <div className="bg-card/80 backdrop-blur-sm rounded-2xl shadow-elegant p-8 md:p-12 animate-scale-in border border-primary/10">
+          <div className="bg-background/40 backdrop-blur-md rounded-2xl shadow-elegant p-8 md:p-12 animate-scale-in border border-primary/20">
 ...
           </div>
         </div>

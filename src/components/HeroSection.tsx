@@ -58,24 +58,28 @@ const HeroSection = () => {
           FASCINIUM
         </h1>
         <div 
-          className="text-xl md:text-2xl lg:text-3xl mb-12 text-foreground/90 font-light tracking-wide animate-fade-in-up flex items-center justify-center gap-2"
+          className="text-xl md:text-2xl lg:text-3xl mb-6 text-foreground/90 font-light tracking-wide animate-fade-in-up"
           style={{ animationDelay: "0.4s" }}
         >
-          <span>Experiências Artísticas que Transformam</span>
-          <Typewriter 
-            text={["Momentos", "Eventos", "Celebrações", "Sonhos"]}
-            speed={80}
-            waitTime={2000}
-            deleteSpeed={50}
-            className="text-primary font-normal"
-            cursorChar="|"
-          />
-          <span>em Magia</span>
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+            <span>Experiências Artísticas que Transformam</span>
+            <Typewriter 
+              text={["Momentos", "Eventos", "Celebrações", "Sonhos"]}
+              speed={80}
+              waitTime={2000}
+              deleteSpeed={50}
+              className="text-primary font-normal"
+              cursorChar="|"
+            />
+          </div>
+          <div className="text-center">
+            <span>em Magia</span>
+          </div>
         </div>
         <Button 
           onClick={scrollToServices}
           size="lg"
-          className="group bg-gradient-gold hover:shadow-glow transition-smooth text-lg px-8 py-6 rounded-full animate-fade-in-up"
+          className="group bg-gradient-gold hover:shadow-glow transition-smooth text-lg px-8 py-6 rounded-full animate-fade-in-up relative z-30 text-background font-semibold"
           style={{ animationDelay: "0.6s" }}
         >
           Descubra a Magia
