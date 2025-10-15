@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { Typewriter } from "@/components/ui/typewriter";
+import { renderCanvas } from "@/components/ui/canvas";
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -8,6 +10,10 @@ const HeroSection = () => {
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
+    
+    // Initialize canvas
+    renderCanvas();
+    
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -18,6 +24,12 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Canvas Interactive Background */}
+      <canvas
+        className="pointer-events-none absolute inset-0 z-5"
+        id="canvas"
+      />
+      
       {/* Video Background */}
       <div 
         className="absolute inset-0 z-0"
@@ -31,7 +43,7 @@ const HeroSection = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-60"
         >
           <source src="https://assets.mixkit.co/videos/preview/mixkit-theater-stage-with-red-curtains-4148-large.mp4" type="video/mp4" />
         </video>
@@ -45,12 +57,21 @@ const HeroSection = () => {
         >
           FASCINIUM
         </h1>
-        <p 
-          className="text-xl md:text-2xl lg:text-3xl mb-12 text-foreground/90 font-light tracking-wide animate-fade-in-up"
+        <div 
+          className="text-xl md:text-2xl lg:text-3xl mb-12 text-foreground/90 font-light tracking-wide animate-fade-in-up flex items-center justify-center gap-2"
           style={{ animationDelay: "0.4s" }}
         >
-          Experiências Artísticas que Transformam Momentos em Magia
-        </p>
+          <span>Experiências Artísticas que Transformam</span>
+          <Typewriter 
+            text={["Momentos", "Eventos", "Celebrações", "Sonhos"]}
+            speed={80}
+            waitTime={2000}
+            deleteSpeed={50}
+            className="text-primary font-normal"
+            cursorChar="|"
+          />
+          <span>em Magia</span>
+        </div>
         <Button 
           onClick={scrollToServices}
           size="lg"
