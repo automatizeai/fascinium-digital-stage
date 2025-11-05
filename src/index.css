@@ -8,7 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 260 30% 8%;
+    /* Matte black background */
+    --background: 0 0% 6%;
     --foreground: 0 0% 98%;
 
     --card: 260 25% 12%;
@@ -38,8 +39,17 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Theatrical gradients */
-    --gradient-theatrical: linear-gradient(135deg, hsl(280 60% 25%) 0%, hsl(260 30% 8%) 100%);
+    /* Theatrical gradients (neutral, matte black) */
+    --gradient-theatrical: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(0 0% 10%) 100%);
+    /* Brand red updated to #890101 */
+    --brand-red: 0 98% 27%;
+    /* Card gradient using brand red (#890101) */
+    --gradient-card-brand: linear-gradient(
+      135deg,
+      color-mix(in srgb, hsl(var(--brand-red)), white 8%) 0%,
+      hsl(var(--brand-red)) 50%,
+      color-mix(in srgb, hsl(var(--brand-red)), black 18%) 100%
+    );
     --gradient-gold: linear-gradient(135deg, hsl(45 100% 65%) 0%, hsl(35 100% 55%) 100%);
     --gradient-spotlight: radial-gradient(circle at 50% 0%, hsl(280 60% 25% / 0.4) 0%, transparent 70%);
     
@@ -53,7 +63,8 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 260 30% 8%;
+    /* Matte black background for dark mode */
+    --background: 0 0% 6%;
     --foreground: 0 0% 98%;
     --card: 260 25% 12%;
     --card-foreground: 0 0% 98%;
@@ -119,6 +130,10 @@ All colors MUST be HSL.
 
   .gradient-gold {
     background: var(--gradient-gold);
+  }
+
+  .gradient-card-brand {
+    background: var(--gradient-card-brand);
   }
 
   .gradient-spotlight {
