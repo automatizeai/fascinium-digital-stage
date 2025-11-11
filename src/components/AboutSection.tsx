@@ -2,12 +2,12 @@ import { Star } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="quem-somos" className="relative py-20 sm:py-24 border-t border-border">
+    <section id="quem-somos" className="relative py-40 sm:py-48 border-t border-border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Texto */}
           <div className="space-y-6">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gradient-gold mb-6 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-gradient-gold mb-12 sm:mb-24 -mt-16">
               Ladies & Gentleman: Welcome to the Fascinium!
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
@@ -31,7 +31,7 @@ const AboutSection = () => {
             {/* Moldura tipo polaroid com leve inclinação */}
             <div className="bg-white rounded-md p-2 sm:p-3 shadow-elegant transform rotate-6">
               <img
-                src="/quemsomos.jpg"
+                src="/beneficio3.jpg"
                 alt="Apresentação Fascinium"
                 className="rounded-sm w-full h-auto object-cover"
                 loading="lazy"
