@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 // Botão removido conforme solicitação
 import { Typewriter } from "@/components/ui/typewriter";
-import { renderCanvas } from "@/components/ui/canvas";
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -9,9 +8,6 @@ const HeroSection = () => {
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
-    
-    // Initialize canvas
-    renderCanvas();
     
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -24,10 +20,6 @@ const HeroSection = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Canvas Interactive Background */}
-      <canvas
-        className="pointer-events-none absolute inset-0 z-5"
-        id="canvas"
-      />
       
       {/* Background Image */}
       <div 
