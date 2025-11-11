@@ -37,18 +37,19 @@ const HeroSection = () => {
         }}
       >
         <img
-          src="/imagembanner1.jpg"
+          src="/banner3.png"
           alt="Fascinium banner"
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-background/80 to-background z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-background/70 to-background z-10" />
+
       </div>
 
       {/* Content */}
       <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
         <h1
-            className="font-serif font-bold mb-6 text-white leading-tight md:leading-[1.1] animate-fade-in-up"
+            className="font-serif font-bold mb-8 text-white leading-tight md:leading-[1.1] animate-fade-in-up"
           style={{ animationDelay: "0.10s" }}
         >
           <span className="block uppercase text-3xl md:text-5xl lg:text-6xl">Transforme seu Evento Empresarial</span>
